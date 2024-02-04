@@ -65,7 +65,6 @@ const displayUserData = (userData) => {
             <td>${item.usernameid}</td>
             <td>${item.username}</td>
             <td>${item.npm}</td>
-            <td>${item.password}</td>
             <td>${item.passwordhash}</td>
             <td>${item.email}</td>
             <td>${item.role}</td>
