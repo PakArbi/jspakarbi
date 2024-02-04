@@ -150,7 +150,7 @@ const displayParkiranData = (parkiranData, tableBodyId) => {
         <td>${item.status ? 'Mahasiswa Aktif' : 'Mahasiswa Tidak Aktif'}</td>
         <td>${item.jammasuk}</td>
         <td>${item.jamkeluar}</td>
-        <td>${item.base64image}</td>
+        <td><img src="data:image/png;base64,${item.base64image}" alt="QR Code"></td>
         <td>
             <a href="editprofilparkiran.html?_id=${item._id}">Edit</a>
             <a href="#" class="delete-link" data-parkiranid="${item.parkiranid}">Delete</a>
