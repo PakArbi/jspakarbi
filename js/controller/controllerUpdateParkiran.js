@@ -37,6 +37,8 @@ const updateParkiran = async (event) => {
     myHeaders.append("Login", token);
     myHeaders.append("Content-Type", "application/json");
 
+    const statusValue = document.getElementById("StatusInput").value === "active";
+
     const requestOptions = {
         method: "PUT",
         headers: myHeaders,
@@ -48,7 +50,7 @@ const updateParkiran = async (event) => {
             namakendaraan: document.getElementById('newnamakendaraan').value,
             nomorkendaraan: document.getElementById('newnomorkendaraan').value,
             jeniskendaraan: document.getElementById('newjeniskendaraan').value,
-            status: document.getElementById("newStatus").value === "active" ? true : false,
+            status: statusValue,
             jammasuk: document.getElementById('newjammasuk').value,
             jamkeluar: document.getElementById('newjamkeluar').value,
         }),
