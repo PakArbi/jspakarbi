@@ -46,9 +46,9 @@ const insertParkiran = async (event) => {
             namakendaraan: document.getElementById('newnamakendaraan').value,
             nomorkendaraan: document.getElementById('newnomorkendaraan').value,
             jeniskendaraan: document.getElementById('newjeniskendaraan').value,
+            status: document.getElementById('newStatus').value === 'active' ? true : false,
             jammasuk: document.getElementById('newjammasuk').value,
             jamkeluar: document.getElementById('newjamkeluar').value,
-            status: document.getElementById('newStatus').value === 'active' ? true : false,
         }),
         redirect: "follow",
     };
@@ -68,6 +68,4 @@ const insertParkiran = async (event) => {
     }
 };
 
-document
-    .getElementById("formparkiran")
-    .addEventListener("submit", insertParkiran);
+document.getElementById("formparkiran").addEventListener("submit", insertParkiran);
