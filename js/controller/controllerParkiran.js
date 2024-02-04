@@ -126,15 +126,15 @@ document.getElementById('parkiranDataBody').addEventListener('click', (event) =>
         const _id = parseInt(target.getAttribute('data-_id'))
         editParkiran(_id)
     } else if (target.classList.contains('delete-link')) {
-        const parkiranId = parseInt(target.getAttribute('data-parkiranid'))
+        const parkiranId = target.getAttribute('data-parkiranid')
         deleteParkiranHandler(parkiranId)
     }
 })
 
 const displayParkiranData = (parkiranData, tableBodyId) => {
-    const parkiranDataBody = document.getElementById(tableBodyId)
+    const parkirdatabody = document.getElementById(tableBodyId)
 
-    parkiranDataBody.innerHTML = ''
+    parkirdatabody.innerHTML = ''
 
     if (parkiranData && parkiranData.length > 0) {
         parkiranData.forEach((item) => {
@@ -155,10 +155,10 @@ const displayParkiranData = (parkiranData, tableBodyId) => {
             <a href="#" class="delete-link" data-parkiranid="${item.parkiranid}">Delete</a>
         </td>
         `
-            parkiranDataBody.appendChild(newRow)
+            parkirdatabody.appendChild(newRow)
         })
     } else {
-        parkiranDataBody.innerHTML = `<tr><td colspan="6">No parkiran data found.</td></tr>`
+        parkirdatabody.innerHTML = `<tr><td colspan="6">No parkiran data found.</td></tr>`
     }
 }
 
