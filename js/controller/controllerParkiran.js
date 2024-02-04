@@ -70,7 +70,7 @@ const deleteParkiran = async (parkiranId) => {
         method: 'DELETE',
         headers: myHeaders,
         body: JSON.stringify({
-            nomorid: parkiranId
+            parkiranid: parkiranId
         }),
         redirect: 'follow',
     }
@@ -126,7 +126,7 @@ document.getElementById('parkiranDataBody').addEventListener('click', (event) =>
         const _id = parseInt(target.getAttribute('data-_id'))
         editParkiran(_id)
     } else if (target.classList.contains('delete-link')) {
-        const parkiranId = target.getAttribute('data-parkiranid')
+        const parkiranId = parseInt(target.getAttribute('data-parkiranid'))
         deleteParkiranHandler(parkiranId)
     }
 })
