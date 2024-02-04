@@ -147,9 +147,9 @@ const displayParkiranData = (parkiranData, tableBodyId) => {
         <td>${item.namakendaraan}</td>
         <td>${item.nomorkendaraan}</td>
         <td>${item.jeniskendaraan}</td>
+        <td>${item.status ? 'Mahasiswa Aktif' : 'Mahasiswa Tidak Aktif'}</td>
         <td>${item.jammasuk}</td>
         <td>${item.jamkeluar}</td>
-        <td>${item.status ? 'Mahasiswa Aktif' : 'Mahasiswa Tidak Aktif'}</td>
         <td>
             <a href="editprofilparkiran.html?_id=${item._id}">Edit</a>
             <a href="#" class="delete-link" data-parkiranid="${item.parkiranid}">Delete</a>
