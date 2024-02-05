@@ -150,7 +150,12 @@ const displayParkiranData = (parkiranData, tableBodyId) => {
         <td>${item.status ? 'Mahasiswa Aktif' : 'Mahasiswa Tidak Aktif'}</td>
         <td>${item.jammasuk}</td>
         <td>${item.jamkeluar}</td>
-        <td><img src="data:image/png;base64,${item.base64image}" alt="QR Code" style="max-width: 100%; height: auto; quality: 100;"></td>
+        <td>
+    <a href="${item.base64image}" download="qr_code_${item.parkiranid}.png">
+        <img src="${item.base64image}" alt="QR Code" style="width: 200px; height: auto;">
+    </a>
+</td>
+
         <td>
             <a href="editprofilparkiran.html?_id=${item._id}">Edit</a>
             <a href="#" class="delete-link" data-parkiranid="${item.parkiranid}">Delete</a>
