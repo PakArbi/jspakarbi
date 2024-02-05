@@ -152,7 +152,7 @@ const displayParkiranData = (parkiranData, tableBodyId) => {
         <td>${item.jamkeluar}</td>
         <td><img src="data:image/png;base64,${item.base64image}" alt="QR Code" style="width: 256px; height: auto;"></td>
         <td>
-            <a href="parkiran.html" class="delete-link" data-parkiranid="${item.parkiranid}">Delete</a>
+            <a href="#" class="delete-link" data-parkiranid="${item.parkiranid}">Delete</a>
         </td>
         `
             parkirdatabody.appendChild(newRow)
